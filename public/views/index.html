@@ -5,14 +5,18 @@
     <title>Giphy Finder</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="scripts/app.js"></script>
+    <link rel="stylesheet" href="styles/styles.css"/>
   </head>
   <body ng-app="giphyApp" ng-controller="MainController as main">
     <form>
       <label>Search:</label>
-      <input type="text" name="seach-item" />
+      <input type="text" name="seach-item" ng-model="main.searchTerm"/>
       <button type="submit" ng-click="main.searchItem()">Submit</button>
     </form>
     <button ng-click="main.randomSearch()">Random</button>
-    <img ng-src="main.pic" />
+    <section>
+      <p ng-repeat="gif in main.gifs"><img ng-src="{{gif.images.original.url}}" /></p>
+    </section>
+    <img ng-class="main.class" ng-src="{{main.pic}}" />
   </body>
 </html>
