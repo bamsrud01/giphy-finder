@@ -1,3 +1,9 @@
 .hidden {
   display: none;
 }
+
+img {
+  float: left;
+  margin: 15px;
+  width: 200px;
+}
