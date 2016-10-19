@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Giphy Finder</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </head>
+  <body ng-app="giphyApp" ng-controller="MainController as main">
+    <form>
+      <label>Search:</label>
+      <input type="text" name="seach-item" />
+      <button type="submit" ng-click="main.searchItem()">Submit</button>
+    </form>
+    <button ng-click="main.randomSearch()">Random</button>
+    <img ng-src="main.pic" />
+  </body>
+</html>
