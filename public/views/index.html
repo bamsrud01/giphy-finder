@@ -10,15 +10,19 @@
     <link rel="stylesheet" href="styles/styles.css"/>
   </head>
   <body ng-app="giphyApp" ng-controller="MainController as main">
-    <form>
-      <label>Search:</label>
-      <input type="text" name="seach-item" ng-model="main.searchTerm"/>
-      <button type="submit" ng-click="main.searchItem()">Submit</button>
-    </form>
-    <button ng-click="main.randomSearch()">Random</button>
+    <header>
+      <img id="logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Giphy_Logo.png/800px-Giphy_Logo.png" />
+      <form>
+        <button ng-click="main.randomSearch()">Random</button>
+        <label>Search:</label>
+        <input type="text" name="seach-item" ng-model="main.searchTerm"/>
+        <button type="submit" ng-click="main.searchItem()">Submit</button>
+      </form>
+    </header>
+
     <section>
-      <p ng-repeat="gif in main.gifs"><img ng-src="{{gif.images.original.url}}" /></p>
+      <div class="image-box" ng-repeat="gif in main.gifs"><img class="image" ng-src="{{gif.images.original.url}}" /></div>
     </section>
-    <img ng-class="main.class" ng-src="{{main.pic}}" />
+    <img class="image" ng-class="main.class" ng-src="{{main.pic}}" />
   </body>
 </html>

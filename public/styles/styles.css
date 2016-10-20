@@ -1,9 +1,49 @@
+body {
+  background-color: MediumSpringGreen;
+}
 .hidden {
   display: none;
 }
 
-img {
-  float: left;
-  margin: 15px;
+.image {
   width: 200px;
+  margin: auto;
+  display: block;
+}
+
+.image-box {
+  float: left;
+  width: 250px;
+  height: 200px;
+  border: 1px solid green;
+  padding-top: 25px;
+}
+
+header {
+  height: 150px;
+  background-color: black;
+  width: 100%;
+}
+
+label {
+  color: white;
+}
+label, input {
+  font-size: 24px;
+  margin: 0 25px 0 25px;
+}
+button {
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+form {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+#logo{
+  display: block;
+  margin: 20px auto 20px auto;
+  width: 300px;
 }
